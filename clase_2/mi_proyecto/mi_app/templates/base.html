@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block titulo %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'mi_app/css/style.css' %}">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="{% static 'mi_app/images/logo.png' %}" alt="Logo" />
+                <span>Mi Sitio</span>
+            </div>
+
+            <nav class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </header>
+        {% block contenido%} {% endblock %}
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </body>
+</html>
